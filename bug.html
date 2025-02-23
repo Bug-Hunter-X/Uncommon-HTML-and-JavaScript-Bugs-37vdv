@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <script>
+    //Incorrect way to add event listener for non-existing element
+    document.getElementById('myDiv').addEventListener('click', function() {
+      alert('Div clicked!');
+    });
+
+    //Another uncommon error: using a reserved keyword as an id
+    document.getElementById('class').addEventListener('click', function(){
+      alert('Class clicked!');
+    })
+  </script>
+</body>
+</html>
