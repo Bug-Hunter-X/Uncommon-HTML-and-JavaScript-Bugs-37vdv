@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Uncommon HTML Bug Solution</title>
+</head>
+<body>
+  <div id="myDiv"></div>
+  <div id="myOtherDiv"></div>
+  <script>
+    //Correct way to add event listener after DOMContentLoaded event
+    document.addEventListener('DOMContentLoaded', function() {
+      document.getElementById('myDiv').addEventListener('click', function() {
+        alert('Div clicked!');
+      });
+    });
+
+    //Correct way to add event listener
+    document.addEventListener('DOMContentLoaded', function(){
+      document.getElementById('myOtherDiv').addEventListener('click', function(){
+        alert('Other Div clicked!');
+      })
+    })
+  </script>
+</body>
+</html>
